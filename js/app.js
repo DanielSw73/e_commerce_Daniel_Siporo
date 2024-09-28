@@ -8,12 +8,12 @@ const mostrarProductos = () => {
 
     for (let i = 1; i < 10; i++) {
         const card = `
-            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 p-0" style="width: 18rem;">
+            <div class="card col-12 col-sm-6 col-md-4 col-lg-3 p-0 border-success mb-3" style="width: 18rem;">
                 <img src="${url}/${i}.jpg" class="card-img-top w-100" style="height: 13rem; object-fit: cover; object-position: center" alt="${i}.jpg">
-                <div class="card-body text-center">
+                <div class="card-body text-center bg-success bg-opacity-25">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="../pages/producto.html" class="btn btn-primary">Ver más</a>
+                    <a href="../pages/producto.html" class="btn btn-success">Ver más</a>
                 </div>
             </div>
         `;
