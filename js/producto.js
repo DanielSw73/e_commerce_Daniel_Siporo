@@ -1,3 +1,5 @@
+import { data } from "./data.js";
+
 class Producto {
     constructor(titulo, detalle, precio, stock, imagen) {
         this.titulo = titulo;
@@ -8,14 +10,17 @@ class Producto {
     }
 }
 
-const url = "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app";
+const prodId = window.location.search.split("=")[1];
+
+const product = data.find(product => product.id === parseInt(prodId));
+
 const container = document.querySelector(".container-product");
 
-const product1 = new Producto("Renault", "Some quick example text to build on the card title and make up the bulk of the card's content.", 3423, 12, 2);
+const product1 = new Producto(product.title, product.description, product.price, product.price, product.image);
 
 const etiquetas = `
     <div class="card col-12 col-sm-6 col-md-4 col-lg-3 p-0" style="width: 18rem;">
-        <img src="${url}/${product1.imagen}.jpg" class="card-img-top w-100" style="height: 13rem; object-fit: cover; object-position: center" alt="${product1.imagen}.jpg">
+        <img src=${product1.imagen} class="card-img-top w-100" style="height: 13rem; object-fit: cover; object-position: center" alt="${product1.imagen}.jpg">
         <div class="card-body text-center">
             <h5 class="card-title">${product1.titulo}</h5>
             <p class="card-text">${product1.detalle}</p>
