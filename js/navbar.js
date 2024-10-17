@@ -10,15 +10,22 @@ const navbar = `
                 <ul class="navbar-nav">
                 </ul>
             </div>
-            <div></div>
+            <div>
+                <form class="d-flex gap-1" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success text-white border-white" type="submit">Search</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </form>
+            </div>
         </div>
     </nav>
 `;
 header.innerHTML = navbar;
 
 const categories = [
+    { title: "Home", href: "../index.html" },
     { title: "Productos", href: "../pages/productos.html" },
-    { title: "Productos1", href: "../pages/categories.html" },
+    { title: "About", href: "../pages/categories.html" },
 ];
 
 const menu = document.querySelector(".navbar-nav");
