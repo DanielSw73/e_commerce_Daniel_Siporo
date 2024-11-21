@@ -134,4 +134,6 @@ const mostrarProductos = (cards) => {
     }
 };
 
+document.querySelector(".main__btn-finish").addEventListener("click", checkout);
+
 mostrarProductos(JSON.parse(localStorage.getItem("cart")) ?? []);
